@@ -1,3 +1,6 @@
+; nasm -f elf64 01.asm -o 01.o
+; ld 01.o -o 01
+
 section .text
     global _start
 

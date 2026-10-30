@@ -1,3 +1,10 @@
+;nasm -f elf64 m1.asm -o m1.o
+; ld m1.o -o m1
+; gdb ./m1
+; break _start
+; run
+; si
+
 section .data
     msg1 db "Welcome to Assembly!", 10
     len1 equ $ - msg1

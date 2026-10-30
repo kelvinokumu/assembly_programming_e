@@ -1,3 +1,11 @@
+; nasm -f elf64 05.asm -o 05.o
+; ld 05.o -o 05
+; gdb ./05
+; break _start
+; run
+; si
+
+
 section .text
     global _start
 

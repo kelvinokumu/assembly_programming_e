@@ -1,3 +1,7 @@
+;nasm -f elf64 macros.asm -o macros.o
+;ld macros.o -o macros
+;./macros
+
 section .data
     msg1 db "start ...", 10
     len1 equ $ - msg1

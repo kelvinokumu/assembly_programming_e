@@ -1,3 +1,10 @@
+;nasm -f elf64 m7.asm -o m7.o
+; ld m7.o -o m7
+; gdb ./m7
+; break _start
+; run
+; si
+
 section .data
     msg1 db "First line"
     len1 equ $ - msg1

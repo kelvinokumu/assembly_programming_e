@@ -1,3 +1,10 @@
+;nasm -f elf64 m3.asm -o m3.o
+; ld m3.o -o m3
+; gdb ./m3
+; break _start
+; run
+; si
+
 section .data
     zero_msg db "Number is zero.", 10
     zero_len equ $ - zero_msg

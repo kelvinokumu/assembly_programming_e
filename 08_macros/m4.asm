@@ -1,3 +1,10 @@
+;nasm -f elf64 m4.asm -o m4.o
+; ld m4.o -o m4
+; gdb ./m4
+; break _start
+; run
+; si
+
 section .data
     msg db "Hello!", 10
     len equ $ - msg

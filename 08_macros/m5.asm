@@ -1,3 +1,11 @@
+;nasm -f elf64 m5.asm -o m5.o
+; ld m5.o -o m5
+; gdb ./m5
+; break _start
+; run
+; si
+
+
 section .data
     msg db "Register operations completed.", 10
     len equ $ - msg

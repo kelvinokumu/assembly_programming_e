@@ -1,3 +1,11 @@
+;nasm -f elf64 m2.asm -o m2.o
+; ld m2.o -o m2
+; gdb ./m2
+; break _start
+; run
+; si
+
+
 section .data
     msg1 db "Addition: "
     len1 equ $ - msg1

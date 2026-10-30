@@ -1,3 +1,11 @@
+;nasm -f elf64 m6.asm -o m6.o
+; ld m6.o -o m6
+; gdb ./m6
+; break _start
+; run
+; si
+
+
 section .data
     msg db "Program completed successfully.", 10
     len equ $ - msg

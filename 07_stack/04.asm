@@ -1,3 +1,11 @@
+; nasm -f elf64 04.asm -o 04.o
+; ld 04.o -o 04
+; gdb ./04
+; break _start
+; run
+; si
+
+
 BITS 32
 section .text
     global _start
