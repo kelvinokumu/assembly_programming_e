@@ -1,0 +1,37 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug ASM",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/mnt/c/Users/irung/Downloads/assembly_programming_e/06_loop/01_loop_instruction",
+            "args": [],
+            "stopAtEntry": true,
+            "externalConsole": false,
+            "cwd": "/mnt/c/Users/irung/Downloads/assembly_programming_e/06_loop",
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Stop at program entry",
+                    "text": "break _start",
+                    "ignoreFailures": false
+                }
+            ],
+            "pipeTransport": {
+                "pipeProgram": "C:\\Windows\\System32\\wsl.exe",
+                "pipeArgs": [
+                    "bash",
+                    "-lc"
+                ],
+                "debuggerPath": "/usr/bin/gdb",
+                "pipeCwd": "${workspaceFolder}"
+            },
+            "sourceFileMap": {
+                "/mnt/c/Users/irung/Downloads/assembly_programming_e": "${workspaceFolder}"
+            },
+            "preLaunchTask": "build_asm"
+        }
+    ]
+}

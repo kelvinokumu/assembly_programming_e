@@ -6,7 +6,7 @@ section .text
     global _start
 
 _start:
-    mov rcx, 5                  ; Repeat 5 times
+    mov r12, 5                  ; Repeat 5 times
 
 repeat:
     ; Print the message
@@ -16,7 +16,8 @@ repeat:
     mov rdx, length
     syscall
 
-    loop repeat    
+    dec r12
+    jnz repeat
 
     
     mov rax, 60          
