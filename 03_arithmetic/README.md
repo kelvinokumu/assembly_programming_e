@@ -1,1 +1,0 @@
-# 03_arithmetic examples
