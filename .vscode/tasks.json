@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "assemble_asm",
+            "type": "shell",
+            "command": "wsl.exe",
+            "args": [
+                "bash",
+                "-lc",
+                "nasm -f elf64 -g -F dwarf /mnt/c/Users/irung/Downloads/assembly_programming_e/06_loop/01_loop_instruction.asm -o /mnt/c/Users/irung/Downloads/assembly_programming_e/06_loop/01_loop_instruction.o"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "link_asm",
+            "type": "shell",
+            "command": "wsl.exe",
+            "args": [
+                "bash",
+                "-lc",
+                "ld /mnt/c/Users/irung/Downloads/assembly_programming_e/06_loop/01_loop_instruction.o -o /mnt/c/Users/irung/Downloads/assembly_programming_e/06_loop/01_loop_instruction"
+            ],
+            "dependsOn": "assemble_asm",
+            "problemMatcher": []
+        },
+        {
+            "label": "build_asm",
+            "dependsOn": "link_asm",
+            "dependsOrder": "sequence",
+            "problemMatcher": []
+        }
+    ]
+}
